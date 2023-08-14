@@ -1,0 +1,25 @@
+.container {
+  margin: 2rem 2.5rem;
+}
+
+.video-detail {
+  margin: 2rem 4.5rem;
+}
+
+.comment-list::-webkit-scrollbar {
+  width: 9px;
+}
+.comment-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.comment-list::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}
+
+@media (max-width: 48em) {
+  .container {
+    margin: 1rem 0.75rem;
+  }
+}
