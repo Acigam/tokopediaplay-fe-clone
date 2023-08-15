@@ -75,7 +75,8 @@ const VideoDetail = () => {
     setAmountComments(amountComments + 1);
   }
 
-  useTitle(`Nonton Video ${video.title} di Tokopedia Play`);
+  // wait for video to be loaded, show current title
+  useTitle(!isLoading ? `Nonton Video ${video?.title} di Tokopedia Play` : document.title);
 
   const gridTemplateColumns = useBreakpointValue({ base: "1fr", md: "0.7fr 0.3fr" });
   const templateAreas = useBreakpointValue({
