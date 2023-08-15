@@ -26,10 +26,6 @@ Link to the backend repository: [tokopediaplay-be-clone](https://github.com/Acig
 2. Open terminal to that repo then Install Dependencies
 
 ```
-npm init -y
-```
-
-```
 npm install
 ```
 
