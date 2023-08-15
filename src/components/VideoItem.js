@@ -13,7 +13,7 @@ const VideoCard = ({ id, title, urlThumbnail, urlVideo }) => {
             borderRadius={{ base: "sm", md: "md" }}
           />
         </AspectRatio>
-        <CardBody px={1} py={1.5}>
+        <CardBody px={1} py={1.5} title={title}>
           <Text fontWeight={"semibold"} size="md" overflowWrap={"normal"} noOfLines={2}>
             {title}
           </Text>

@@ -15,7 +15,7 @@ const ProductCard = ({ title, price, linkProduct }) => {
       <Link to={linkProduct} target="_blank">
         <Circle size="10px" position="absolute" top={2} right={2} bg="green.200" />
 
-        <Box p="3">
+        <Box p="3" title={title}>
           <Flex flexDirection={"column"} justifyContent={"space-between"}>
             <Text overflowWrap={"normal"} noOfLines={2} h="3em" overflow="hidden">
               {title}

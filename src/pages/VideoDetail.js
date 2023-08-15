@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { AspectRatio, Grid, GridItem, Text } from "@chakra-ui/react";
+import { AspectRatio, Grid, GridItem, Text, useBreakpointValue } from "@chakra-ui/react";
 import { nanoid } from "nanoid";
 
 import { socket } from "../websocket/socket";
@@ -77,15 +77,20 @@ const VideoDetail = () => {
 
   useTitle(`Nonton Video ${video.title} di Tokopedia Play`);
 
+  const gridTemplateColumns = useBreakpointValue({ base: "1fr", md: "0.7fr 0.3fr" });
+  const templateAreas = useBreakpointValue({
+    base: `"video" "product" "comment"`,
+    md: `"video product" "comment product"`,
+  });
+
   return (
     <div className="video-detail">
       {isLoading ? null : error ? (
         <ErrorMessage message={error} />
       ) : (
         <Grid
-          templateAreas={`"video product" 
-                        "comment product"`}
-          gridTemplateColumns={"0.7fr 0.3fr"}
+          templateAreas={templateAreas}
+          gridTemplateColumns={gridTemplateColumns}
           gridTemplateRows={"1fr"}
           h="200px"
           columnGap="4"
